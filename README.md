@@ -1,5 +1,7 @@
 # Calling the API
 
+The code for communicating with the API is located in `ARTask/ARTask/Managers/APIManager.swift`
+
 The request url for obtaining a 3D model by ID is `https://dev.api.curie.io/public/products/\(id)/media?formats=usdz`
 
 Here `\(id)` should be replaced by the ID of the product
@@ -15,6 +17,8 @@ Here is the code for setting the method and the headers for calling the API
 ```
         request.httpMethod = "GET"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue(<YOUR-API-KEY>, forHTTPHeaderField: "x-curie-api-key")
+        request.addValue(<API-KEY>, forHTTPHeaderField: "x-curie-api-key")
 ```
+The `<API-KEY>` is currently hardcoded, please change it with your API key
+
 
