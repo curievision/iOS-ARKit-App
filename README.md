@@ -19,6 +19,8 @@ Here is the code for setting the method and the headers for calling the API
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue(<API-KEY>, forHTTPHeaderField: "x-curie-api-key")
 ```
-The `<API-KEY>` is currently hardcoded, please change it with your API key
+The `<API-KEY>` is currently hardcoded, please change it with your API key.
 
+NOTE:
+There is currently a placeholder image which shows once the App is open and we are waiting for the 3D model to be downloaded. Soon (this week) we will offer an endpoint for obtaining this thumbnail image through the API 
 
