@@ -1,6 +1,8 @@
 # Description
 
-The Application emulates the product view of the Stockx's mobile App. We have a single product (the id is hardoced in the App) that is fetched from Curie's API and displayer in a product view. Once the App is started it starts fetching a 3D model for the product. While the product is being downloaded, a thumbnail image appears. This thumbnail image is currently a placeholder which shows only while we are waiting for the 3D model to download, after that it replaces it. You may notice that this app utilizes a framework for actually calling the API. This framework automatically handles for you downloading and caching models. An example of how to use the framework is located in
+The Application emulates the product view of the Stockx's mobile App. We have a single product (the id is hardoced in the App) that is fetched from Curie's API and displayer in a product view. Once the App is started it starts fetching a 3D model for the product. While the product is being downloaded, a thumbnail image appears. This thumbnail image is currently a placeholder which shows only while we are waiting for the 3D model to download, after that it replaces it. Currenlty, we are still working on generating thumbanail urls for our products. If you notice a problem that the thumbnail image does not appear, please let us know and we will work to resolve it.
+
+You may notice that this app utilizes a framework for actually calling the API. This framework automatically handles for you downloading and caching models. An example of how to use the framework is located in
 
 `ARTask/ARTask/ViewController.swift`
 
