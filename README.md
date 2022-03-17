@@ -1,30 +1,11 @@
 # Description
 
-The Application emulates the product view of the Stockx's mobile App. We have a single product (the id is hardoced in the App) that is fetched from Curie's API and displayer in a product view. Once the App is started it starts fetching a 3D model for the product. While the product is being downloaded, a thumbnail image appears. This thumbnail image is currently a placeholder which shows only while we are waiting for the 3D model to download, after that it replaces it. Soon (this week) we will offer an endpoint for obtaining this thumbnail image through the API as well
+The Application emulates the product view of the Stockx's mobile App. We have a single product (the id is hardoced in the App) that is fetched from Curie's API and displayer in a product view. Once the App is started it starts fetching a 3D model for the product. While the product is being downloaded, a thumbnail image appears. This thumbnail image is currently a placeholder which shows only while we are waiting for the 3D model to download, after that it replaces it. You may notice that this app utilizes a framework for actually calling the API. This framework automatically handles for you downloading and caching models. An example of how to use the framework is located in
 
-# Calling the API
+`ARTask/ARTask/ViewController.swift`
 
-The code for communicating with the API is located in `ARTask/ARTask/Managers/APIManager.swift`
+The parameters you need to provide are:
 
-The request url for obtaining a 3D model by ID is `https://dev.api.curie.io/public/products/\(id)/media?formats=usdz`
-
-Here `\(id)` should be replaced by the ID of the product
-
-Below is the code for creating the request
-
-```swift
-  var request = URLRequest(url: URL(string: "https://dev.api.curie.io/public/products/\(id)/media?formats=usdz")!, timeoutInterval: 20)
-```
-
-Here is the code for setting the method and the headers for calling the API
-
-```
-        request.httpMethod = "GET"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue(<API-KEY>, forHTTPHeaderField: "x-curie-api-key")
-```
-The `<API-KEY>` is currently hardcoded, please change it with your API key.
-
-NOTE:
-There is currently a placeholder image which shows once the App is open and we are waiting for the 3D model to be downloaded. Soon (this week) we will offer an endpoint for obtaining this thumbnail image through the API 
-
+* apiKey - Your API Key (the one in the code will work for testing purposes, further if we start working together we will give you another API Key which gives you access to all products which your company hosts with us)
+* maxNumberOfModelsToCache - The number of models you want to cache. For example, if this is 2, the last 2 models you downloaded will always be cached and you won't need to download them again. 
+* aRModelKey - The product id (the one in the code will work for testing purposes, further if we start working together you will be able to access a list of ids for all products you host with us)
