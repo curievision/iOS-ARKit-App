@@ -13,10 +13,26 @@
 		030726A027C52610005BBC57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0307269E27C52610005BBC57 /* Main.storyboard */; };
 		030726A227C52612005BBC57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030726A127C52612005BBC57 /* Assets.xcassets */; };
 		030726A527C52612005BBC57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030726A327C52612005BBC57 /* LaunchScreen.storyboard */; };
-		030726AE27C5271C005BBC57 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030726AD27C5271C005BBC57 /* APIManager.swift */; };
 		030726B327C5E580005BBC57 /* UIView+Border.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030726B227C5E580005BBC57 /* UIView+Border.swift */; };
-		030726BB27C61CE9005BBC57 /* ARDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030726BA27C61CE9005BBC57 /* ARDataHandler.swift */; };
+		030726B527C5F126005BBC57 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030726B427C5F126005BBC57 /* TableViewCell.swift */; };
+		030726B727C5F333005BBC57 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 030726B627C5F333005BBC57 /* art.scnassets */; };
+		B65F416427E3AB0400644A4F /* ARManager.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B65F416327E3AB0400644A4F /* ARManager.xcframework */; };
+		B65F416527E3AB0400644A4F /* ARManager.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B65F416327E3AB0400644A4F /* ARManager.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B65F416627E3AB0400644A4F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B65F416527E3AB0400644A4F /* ARManager.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0307269527C52610005BBC57 /* ARTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -27,9 +43,10 @@
 		030726A127C52612005BBC57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		030726A427C52612005BBC57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		030726A627C52612005BBC57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		030726AD27C5271C005BBC57 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		030726B227C5E580005BBC57 /* UIView+Border.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Border.swift"; sourceTree = "<group>"; };
-		030726BA27C61CE9005BBC57 /* ARDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARDataHandler.swift; sourceTree = "<group>"; };
+		030726B427C5F126005BBC57 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		030726B627C5F333005BBC57 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		B65F416327E3AB0400644A4F /* ARManager.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ARManager.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B65F416427E3AB0400644A4F /* ARManager.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +66,7 @@
 			children = (
 				0307269727C52610005BBC57 /* ARTask */,
 				0307269627C52610005BBC57 /* Products */,
+				034E8E0A27DAAE25000BFE44 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,10 +81,10 @@
 		0307269727C52610005BBC57 /* ARTask */ = {
 			isa = PBXGroup;
 			children = (
-				030726AC27C5271C005BBC57 /* Managers */,
+				030726B627C5F333005BBC57 /* art.scnassets */,
 				030726AF27C52729005BBC57 /* AppDelegate+SceneDelegate */,
 				0307269C27C52610005BBC57 /* ViewController.swift */,
-				030726BA27C61CE9005BBC57 /* ARDataHandler.swift */,
+				030726B427C5F126005BBC57 /* TableViewCell.swift */,
 				030726B227C5E580005BBC57 /* UIView+Border.swift */,
 				0307269E27C52610005BBC57 /* Main.storyboard */,
 				030726A127C52612005BBC57 /* Assets.xcassets */,
@@ -75,14 +94,6 @@
 			path = ARTask;
 			sourceTree = "<group>";
 		};
-		030726AC27C5271C005BBC57 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				030726AD27C5271C005BBC57 /* APIManager.swift */,
-			);
-			path = Managers;
-			sourceTree = "<group>";
-		};
 		030726AF27C52729005BBC57 /* AppDelegate+SceneDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +101,14 @@
 				0307269A27C52610005BBC57 /* SceneDelegate.swift */,
 			);
 			path = "AppDelegate+SceneDelegate";
+			sourceTree = "<group>";
+		};
+		034E8E0A27DAAE25000BFE44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B65F416327E3AB0400644A4F /* ARManager.xcframework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,6 +121,7 @@
 				0307269127C52610005BBC57 /* Sources */,
 				0307269227C52610005BBC57 /* Frameworks */,
 				0307269327C52610005BBC57 /* Resources */,
+				B65F416627E3AB0400644A4F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				030726A527C52612005BBC57 /* LaunchScreen.storyboard in Resources */,
+				030726B727C5F333005BBC57 /* art.scnassets in Resources */,
 				030726A227C52612005BBC57 /* Assets.xcassets in Resources */,
 				030726A027C52610005BBC57 /* Main.storyboard in Resources */,
 			);
@@ -163,11 +184,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				030726AE27C5271C005BBC57 /* APIManager.swift in Sources */,
-				030726BB27C61CE9005BBC57 /* ARDataHandler.swift in Sources */,
 				0307269D27C52610005BBC57 /* ViewController.swift in Sources */,
 				030726B327C5E580005BBC57 /* UIView+Border.swift in Sources */,
 				0307269927C52610005BBC57 /* AppDelegate.swift in Sources */,
+				030726B527C5F126005BBC57 /* TableViewCell.swift in Sources */,
 				0307269B27C52610005BBC57 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,6 +338,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 25L3A26A2A;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ARTask",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ARTask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -332,7 +356,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lazovstef.ARTask;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lazovstef.ARTask1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -348,6 +372,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 25L3A26A2A;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ARTask",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ARTask/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -362,7 +390,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lazovstef.ARTask;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lazovstef.ARTask1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

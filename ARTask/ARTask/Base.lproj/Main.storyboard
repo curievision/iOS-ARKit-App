@@ -264,7 +264,20 @@
                             <constraint firstItem="kpe-WE-V8q" firstAttribute="top" secondItem="jZk-1D-YBR" secondAttribute="bottom" constant="20" id="qLz-gb-OJM"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="4AZ-GA-FMJ"/>
+                    <navigationItem key="navigationItem" id="4AZ-GA-FMJ">
+                        <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="hjW-W7-e3U">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="gu4-Ii-xBv">
+                                <rect key="frame" x="242" y="5" width="117" height="34.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Clear Cache"/>
+                                <connections>
+                                    <action selector="clearCachedButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sau-53-fFM"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="buttonViewInAR" destination="Qo6-sg-4DW" id="sQB-eP-1Er"/>
                         <outlet property="imageViewPlaceHolder" destination="eDd-R4-0eC" id="u99-Pu-ZZ6"/>

@@ -1,0 +1,11 @@
+framework module ARManager {
+  umbrella header "ARManager.h"
+
+  export *
+  module * { export * }
+}
+
+module ARManager.Swift {
+    header "ARManager-Swift.h"
+    requires objc
+}

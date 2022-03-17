@@ -10,6 +10,7 @@ import SceneKit
 import SceneKit.ModelIO
 import QuickLook
 import ARKit
+import ARManager
 
 class ViewController: UIViewController {
 
@@ -30,8 +31,11 @@ class ViewController: UIViewController {
     
     //This ARDataHandler object provides with method to get ARModel Url
     private let aRDataHandler = ARDataHandler()
+    
     // This property is the key for model to be downloaded and used, You can can change it to your own
-    private let aRModelKey = "620ff9c89b762319fd4ccdf4"
+//    private let aRModelKey = "620ff9c89b762319fd4ccdf4"
+    private let aRModelKey = "622252af21464bca8e646a4f"
+//
     
     private var modelLocalUrl: URL?
     private var modelThumbnail: String?
@@ -41,11 +45,25 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Request for the local file path url of AR Model
-        aRDataHandler.getARModelFor(id: self.aRModelKey) { [weak self] url, placeHolder in
+        // Required: Provide your API key
+        ARFileManager.shared.apiKey = "haTe07l_YFMNluSBR00ENJHLfD3iGqif"   //"HNRO_3BeVJRxOAHkF1-hNbmpHAQBDa_O"
+        
+        // Optional: Provide the number of models you want to cache. Default value is 3
+        ARFileManager.shared.maxNumberOfModelsToCache = 3
+        
+        // Optional: Request for the thumbnail url of AR Model
+        aRDataHandler.getThumbnailUrlForModelId(id: self.aRModelKey) { [weak self] placeHolderUrl, error in
             guard let self = self else { return }
-            self.modelLocalUrl = url
+            guard let placeHolder = placeHolderUrl else { return }
             self.modelThumbnail = placeHolder
+            self.configureViews()
+        }
+
+        // Request for the local file path url of AR Model
+        aRDataHandler.getARModelFor(id: self.aRModelKey) { [weak self] url, error in
+            guard let self = self else { return }
+            guard let url = url else { return }
+            self.modelLocalUrl = url
             self.configureViews()
         }
         
@@ -92,6 +110,10 @@ class ViewController: UIViewController {
     
     @IBAction func buttonViewInARTapped(_ sender: Any) {
         self.moveToPreviewView()
+    }
+    
+    @IBAction func clearCachedButtonTapped(_ sender: Any) {
+//        ARCacheManager.shared.clearCache()
     }
     
     // MARK:- Navigation
